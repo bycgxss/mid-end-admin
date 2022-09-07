@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.{js,ts,jsx,tsx,vue}\"",
     "lint:fix": "eslint \"src/**/*.{js,ts,jsx,tsx,vue}\" --fix",
-    "lint:fmt": "prettier --write \"src/**/*.{html,css,scss,json,md,js,ts,vue,jsx,tsx}\""
+    "lint:fmt": "prettier --write \"src/**/*.{html,css,scss,json,md,js,ts,vue,jsx,tsx}\"",
+    "cz": "git-cz"
   },
   "dependencies": {
     "vue": "^3.2.37"
@@ -17,6 +18,8 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.26.3",
     "@vitejs/plugin-vue": "^3.1.0",
+    "commitizen": "^4.2.5",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -26,6 +29,18 @@
     "vue-tsc": "^0.40.4"
   },
   "eslintConfig": {
-    "extends": ["@antfu", "prettier", "plugin:prettier/recommended"]
+    "extends": [
+      "@antfu",
+      "prettier",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./.cz-config.cjs"
+    }
   }
 }
