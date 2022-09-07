@@ -6,15 +6,26 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint \"src/**/*.{js,ts,jsx,tsx,vue}\"",
+    "lint:fix": "eslint \"src/**/*.{js,ts,jsx,tsx,vue}\" --fix",
+    "lint:fmt": "prettier --write \"src/**/*.{html,css,scss,json,md,js,ts,vue,jsx,tsx}\""
   },
   "dependencies": {
     "vue": "^3.2.37"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.26.3",
     "@vitejs/plugin-vue": "^3.1.0",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
     "typescript": "^4.6.4",
     "vite": "^3.1.0",
     "vue-tsc": "^0.40.4"
+  },
+  "eslintConfig": {
+    "extends": ["@antfu", "prettier", "plugin:prettier/recommended"]
   }
 }
