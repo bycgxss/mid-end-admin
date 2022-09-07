@@ -21,6 +21,7 @@
     "@antfu/eslint-config": "^0.26.3",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@types/node": "^18.7.15",
     "@vitejs/plugin-vue": "^3.1.0",
     "commitizen": "^4.2.5",
     "cz-customizable": "^7.0.0",
