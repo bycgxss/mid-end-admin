@@ -1,7 +1,12 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import axios from 'axios'
 import HelloWorld from './components/HelloWorld.vue'
+axios.get('/api/table/posts').then((res) => {
+  // eslint-disable-next-line no-console
+  console.log(res)
+})
 </script>
 
 <template>
